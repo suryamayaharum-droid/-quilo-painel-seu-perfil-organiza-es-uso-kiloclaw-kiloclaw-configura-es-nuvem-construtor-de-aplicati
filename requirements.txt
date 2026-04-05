@@ -1,0 +1,11 @@
+# HoloOS Requirements
+
+# Core
+numpy>=1.24.0
+typing-extensions>=4.5.0
+
+# Optional (for full functionality)
+# flask>=2.3.0      # Web server
+# redis>=4.5.0     # Key-Value store
+# aiohttp>=3.8.0   # Async HTTP
+# pydantic>=2.0.0  # Validation
