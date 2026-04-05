@@ -4,8 +4,30 @@
 numpy>=1.24.0
 typing-extensions>=4.5.0
 
-# Optional (for full functionality)
-# flask>=2.3.0      # Web server
-# redis>=4.5.0     # Key-Value store
-# aiohttp>=3.8.0   # Async HTTP
-# pydantic>=2.0.0  # Validation
+# Web Framework
+fastapi>=0.109.0
+uvicorn>=0.27.0
+pydantic>=2.5.0
+
+# CLI
+click>=8.1.0
+
+# HTTP Client
+requests>=2.31.0
+
+# Database (optional)
+# psycopg2-binary>=2.9.0  # PostgreSQL
+# redis>=5.0.0            # Redis
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Code Quality
+ruff>=0.1.0
+mypy>=1.8.0
+
+# Optional
+# aiohttp>=3.9.0        # Async HTTP
+# pypdf>=3.0.0          # PDF processing
+# sentence-transformers>=2.2.0  # Embeddings

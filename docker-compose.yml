@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  # FastAPI Server
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - HOLOOS_ENV=production
+      - DATABASE_URL=postgresql://holoos:holoos@db:5432/holoos
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - db
+      - redis
+
+  # Next.js Frontend
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://api:8000
+
+  # PostgreSQL Database
+  db:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_USER=holoos
+      - POSTGRES_PASSWORD=holoos
+      - POSTGRES_DB=holoos
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  # Celery Workers
+  worker:
+    build: .
+    command: python -m holoos.worker
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+
+volumes:
+  postgres_data:
+  redis_data:

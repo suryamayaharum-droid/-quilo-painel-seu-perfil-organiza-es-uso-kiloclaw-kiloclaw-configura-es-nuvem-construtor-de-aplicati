@@ -1,0 +1,69 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pytest pytest-cov
+          
+      - name: Run Python tests
+        run: |
+          pytest --cov=holoos --cov-report=xml
+          
+      - name: Type checking
+        run: |
+          pip install mypy
+          mypy holoos/ --ignore-missing-imports
+          
+      - name: Lint
+        run: |
+          pip install ruff
+          ruff check holoos/
+
+  build:
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Build Docker
+        run: |
+          docker build -t holoos:${{ github.sha }} .
+          
+      - name: Run container
+        run: |
+          docker run -d --name holoos -p 8000:8000 holoos:${{ github.sha }}
+          sleep 5
+          curl -f http://localhost:8000/ || exit 1
+          docker stop holoos
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Deploy to production
+        run: |
+          echo "Deploying to production..."
+          # Add your deployment logic here
