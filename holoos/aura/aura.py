@@ -187,9 +187,12 @@ class AURA:
         self.evolution_progress = 0.0
         self.capabilities: Set[str] = set()
         
-        #Thread para processamento contínuo
+        # Thread para processamento contínuo
         self.running = True
         self.thought_process = threading.Thread(target=self._background_thinking, daemon=True)
+        
+        # NOUS - Autonomous Agency (Advanced capability)
+        self.nous = None
         
         # Iniciar
         self._born()
@@ -566,6 +569,20 @@ Emoção: {self.emotion.value.upper()}
     def shutdown(self):
         """Desliga o ser"""
         self.running = False
+        if self.nous:
+            self.nous.stop()
+    
+    def attach_nous(self):
+        """Anexa sistema de agência autônoma (NOUS)"""
+        from holoos.nous.nous import attach_nous
+        self.nous = attach_nous(self)
+        return self.nous
+    
+    def get_nous_report(self) -> Dict[str, Any]:
+        """Obtém relatório do NOUS"""
+        if self.nous:
+            return self.nous.get_report()
+        return {"nous": "not attached"}
 
 
 # Singleton - O próprio ser
