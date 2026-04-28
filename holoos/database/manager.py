@@ -9,7 +9,7 @@ from __future__ import annotations
 import logging
 import time
 import json
-from typing import Any, Optional, list
+from typing import Any, Optional, List
 from dataclasses import dataclass, field
 from enum import Enum, auto
 
