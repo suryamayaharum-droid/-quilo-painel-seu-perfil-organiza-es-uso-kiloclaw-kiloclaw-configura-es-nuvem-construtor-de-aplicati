@@ -83,8 +83,17 @@ from holoos.governance import MetaGovernanceAssembly, get_assembly
 from holoos.ai import get_super_intelligence
 from holoos.memory import get_memory
 from holoos.planning import get_planner
+from holoos.events import get_event_bus, publish_event, EventType
+from holoos.integrations import (
+    LangChainAdapter,
+    get_langchain_adapter,
+    ChromaDBVectorStore,
+    get_chromadb_rag,
+    PrometheusMetrics,
+    get_prometheus_metrics
+)
 
-__version__ = "0.7.0"
+__version__ = "0.8.0"
 
 __all__ = [
     # Core types
@@ -197,4 +206,21 @@ __all__ = [
     "get_security_kernel",
     "ThreatLevel",
     "ThreatCategory",
+    
+    # Events
+    "EventBus",
+    "Event",
+    "EventType",
+    "get_event_bus",
+    "publish_event",
+    
+    # Integrations
+    "LangChainAdapter",
+    "HoloOSTool",
+    "get_langchain_adapter",
+    "ChromaDBVectorStore",
+    "ChromaDBRAGEngine",
+    "get_chromadb_rag",
+    "PrometheusMetrics",
+    "get_prometheus_metrics"
 ]

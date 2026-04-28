@@ -1,0 +1,99 @@
+2026-04-28 20:53:13,813 - holoos - INFO - ============================================================
+2026-04-28 20:53:13,813 - holoos - INFO - HoloOS v0.7.0 - Starting System...
+2026-04-28 20:53:13,813 - holoos - INFO - ============================================================
+2026-04-28 20:53:14,092 - holoos - INFO - Initializing modules...
+2026-04-28 20:53:14,092 - holoos - INFO - ✓ Pipeline Coordinator
+2026-04-28 20:53:14,093 - holoos - INFO - ✓ Ethical Core
+2026-04-28 20:53:14,093 - holoos.ai.hub - INFO - [ModelRegistry] Initialized with 16 models
+2026-04-28 20:53:14,093 - holoos.ai.hub - INFO - [ModelRegistry] Initialized with 16 models
+2026-04-28 20:53:14,093 - holoos.ai.hub - INFO - [InferenceEngine] Initialized
+2026-04-28 20:53:14,093 - holoos.ai.hub - INFO - [ModelRegistry] Initialized with 16 models
+2026-04-28 20:53:14,093 - holoos.ai.hub - INFO - [InferenceEngine] Initialized
+2026-04-28 20:53:14,093 - holoos.ai.hub - INFO - [ModelOrchestrator] Initialized
+2026-04-28 20:53:14,093 - holoos.ai.hub - INFO - [SuperIntelligence] Initialized - All AI models integrated
+2026-04-28 20:53:14,093 - holoos - INFO - ✓ Super Intelligence (17 models)
+2026-04-28 20:53:14,093 - holoos.memory.system - INFO - [VectorStore] Initialized with 768 dimensions
+2026-04-28 20:53:14,093 - holoos.memory.system - INFO - [SemanticMemory] Initialized
+2026-04-28 20:53:14,093 - holoos.memory.system - INFO - [EpisodicMemory] Initialized with max 1000 episodes
+2026-04-28 20:53:14,093 - holoos.memory.system - INFO - [WorkingMemory] Initialized with capacity 7
+2026-04-28 20:53:14,093 - holoos.memory.system - INFO - [ProceduralMemory] Initialized
+2026-04-28 20:53:14,093 - holoos.memory.system - INFO - [UnifiedMemory] Initialized
+2026-04-28 20:53:14,093 - holoos - INFO - ✓ Unified Memory
+2026-04-28 20:53:14,093 - holoos.planning.planner - INFO - [GoalDecomposer] Initialized
+2026-04-28 20:53:14,093 - holoos.planning.planner - INFO - [ReasoningEngine] Initialized
+2026-04-28 20:53:14,093 - holoos.planning.planner - INFO - [Planner] Initialized
+2026-04-28 20:53:14,093 - holoos - INFO - ✓ Planner & Reasoning
+2026-04-28 20:53:14,093 - holoos.communication.hub - INFO - [RequestRouter] Initialized
+2026-04-28 20:53:14,093 - holoos.communication.hub - INFO - [WebSocketManager] Initialized
+2026-04-28 20:53:14,093 - holoos.communication.hub - INFO - [EventBus] Initialized
+2026-04-28 20:53:14,093 - holoos.communication.hub - INFO - [CommunicationHub] Initialized
+2026-04-28 20:53:14,093 - holoos - INFO - ✓ Communication Hub
+2026-04-28 20:53:14,093 - holoos.tools.executor - INFO - [ToolRegistry] Initialized with 8 tools
+2026-04-28 20:53:14,093 - holoos.tools.executor - INFO - [ToolExecutor] Initialized
+2026-04-28 20:53:14,093 - holoos - INFO - ✓ Tool Executor (9 tools)
+2026-04-28 20:53:14,093 - holoos.gateway.gateway - INFO - [RateLimiter] Initialized
+2026-04-28 20:53:14,093 - holoos.gateway.gateway - INFO - [AuthManager] Initialized
+2026-04-28 20:53:14,093 - holoos.gateway.gateway - INFO - [RequestCache] Initialized
+2026-04-28 20:53:14,093 - holoos.gateway.gateway - INFO - [APIGateway] Initialized
+2026-04-28 20:53:14,093 - holoos - INFO - ✓ API Gateway
+2026-04-28 20:53:14,093 - holoos.database.manager - INFO - [SQLDatabase] Initialized: holoos
+2026-04-28 20:53:14,093 - holoos.database.manager - INFO - [NoSQLDatabase] Initialized
+2026-04-28 20:53:14,093 - holoos.database.manager - INFO - [KeyValueStore] Initialized
+2026-04-28 20:53:14,093 - holoos.database.manager - INFO - [SQLDatabase] Table created: users
+2026-04-28 20:53:14,093 - holoos.database.manager - INFO - [SQLDatabase] Table created: sessions
+2026-04-28 20:53:14,093 - holoos.database.manager - INFO - [DatabaseManager] Initialized
+2026-04-28 20:53:14,093 - holoos - INFO - ✓ Database Manager
+2026-04-28 20:53:14,093 - holoos.monitoring.system - INFO - [MetricsCollector] Initialized
+2026-04-28 20:53:14,093 - holoos.monitoring.system - INFO - [HealthChecker] Initialized
+2026-04-28 20:53:14,093 - holoos.monitoring.system - INFO - [Logger] Initialized: holoos
+2026-04-28 20:53:14,093 - holoos.monitoring.system - INFO - [MonitoringSystem] Initialized
+2026-04-28 20:53:14,093 - holoos - INFO - ✓ Monitoring System
+2026-04-28 20:53:14,093 - holoos.plugins.manager - INFO - [PluginRegistry] Initialized
+2026-04-28 20:53:14,093 - holoos.plugins.manager - INFO - [PluginManager] Initialized
+2026-04-28 20:53:14,093 - holoos - INFO - ✓ Plugin Manager
+2026-04-28 20:53:14,093 - holoos.config.manager - INFO - [ConfigManager] Initialized
+2026-04-28 20:53:14,093 - holoos - INFO - ✓ Config Manager
+2026-04-28 20:53:14,094 - holoos.security.kernel - INFO - [ThreatDetector] Initialized
+2026-04-28 20:53:14,094 - holoos.security.kernel - INFO - [IPS] Initialized
+2026-04-28 20:53:14,094 - holoos.security.kernel - INFO - [PolicyEngine] Initialized
+2026-04-28 20:53:14,094 - holoos.security.kernel - INFO - [Encryption] Initialized
+2026-04-28 20:53:14,094 - holoos.security.kernel - INFO - [AuditLogger] Initialized
+2026-04-28 20:53:14,094 - holoos.security.kernel - INFO - [SecurityKernel] Initialized
+2026-04-28 20:53:14,094 - holoos - INFO - ✓ Security Kernel
+2026-04-28 20:53:14,094 - holoos.kernel.soul - INFO - [Soul] Initialized: HoloOS v0.2.0
+2026-04-28 20:53:14,094 - holoos - INFO - ✓ Soul/Identity
+2026-04-28 20:53:14,094 - holoos.governance.assembly - INFO - [GovernanceChamber] General Assembly initialized
+2026-04-28 20:53:14,094 - holoos.governance.assembly - INFO - [ExecutiveBranch] Initialized
+2026-04-28 20:53:14,094 - holoos.governance.assembly - INFO - [JudiciaryBranch] Initialized
+2026-04-28 20:53:14,094 - holoos.governance.assembly - INFO - [AssemblyMember] Initialized System Coordinator as COORDINATOR
+2026-04-28 20:53:14,094 - holoos.governance.assembly - INFO - [GovernanceChamber] Added System Coordinator
+2026-04-28 20:53:14,094 - holoos.governance.assembly - INFO - [AssemblyMember] Initialized Code Worker as WORKER
+2026-04-28 20:53:14,094 - holoos.governance.assembly - INFO - [GovernanceChamber] Added Code Worker
+2026-04-28 20:53:14,094 - holoos.governance.assembly - INFO - [AssemblyMember] Initialized Analysis Worker as WORKER
+2026-04-28 20:53:14,094 - holoos.governance.assembly - INFO - [GovernanceChamber] Added Analysis Worker
+2026-04-28 20:53:14,094 - holoos.governance.assembly - INFO - [AssemblyMember] Initialized System Observer as OBSERVER
+2026-04-28 20:53:14,094 - holoos.governance.assembly - INFO - [GovernanceChamber] Added System Observer
+2026-04-28 20:53:14,094 - holoos.governance.assembly - INFO - [MetaGovernanceAssembly] Initialized
+2026-04-28 20:53:14,094 - holoos - INFO - ✓ Governance Assembly
+2026-04-28 20:53:14,094 - holoos.kernel.consciousness - INFO - [GlobalWorkspace] Initialized with capacity 10
+2026-04-28 20:53:14,094 - holoos.kernel.consciousness - INFO - [IntegratedInformation] Initialized
+2026-04-28 20:53:14,094 - holoos.kernel.consciousness - INFO - [PredictiveProcessor] Initialized
+2026-04-28 20:53:14,094 - holoos.kernel.consciousness - INFO - [AttentionSystem] Initialized
+2026-04-28 20:53:14,094 - holoos.kernel.consciousness - INFO - [ConsciousnessArchitecture] Initialized
+2026-04-28 20:53:14,094 - holoos - INFO - ✓ Consciousness Architecture
+2026-04-28 20:53:14,094 - holoos - INFO - ✓ Autonomous Code Generator
+2026-04-28 20:53:14,094 - holoos - INFO - ============================================================
+2026-04-28 20:53:14,094 - holoos - INFO - HoloOS v0.7.0 - All Systems Online!
+2026-04-28 20:53:14,094 - holoos - INFO - ============================================================
+2026-04-28 20:53:14,094 - holoos - INFO - 
+System Status:
+2026-04-28 20:53:14,094 - holoos - INFO -   - AI Models: 16
+2026-04-28 20:53:14,094 - holoos - INFO -   - Memory: {'semantic_memories': 0, 'episodic_episodes': 0, 'working_memory_items': 0, 'procedures': 0}
+2026-04-28 20:53:14,094 - holoos - INFO -   - Tools: 8
+2026-04-28 20:53:14,094 - holoos - INFO -   - Gateway Routes: 0
+2026-04-28 20:53:14,094 - holoos - INFO -   - Database: {'sql_tables': 2, 'sql_records': 0, 'nosql_collections': 0, 'kv_keys': 0}
+2026-04-28 20:53:14,094 - holoos - INFO -   - Security Level: 3
+
+============================================================
+HoloOS is running! Press Ctrl+C to stop.
+============================================================
